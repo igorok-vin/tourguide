@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "1e4047be-fcbc-4f57-869c-5c30ced9a538",
+		"name": "TourGuide",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13308459"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/getLocation?userName=internalUser3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getLocation?userName=internalUser3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getLocation"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "internalUser3"
+						}
+					]
+				},
+				"description": "getLocation"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/getNearbyAttractions?userName=internalUser3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getNearbyAttractions?userName=internalUser3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getNearbyAttractions"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "internalUser3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/getAllCurrentLocations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getAllCurrentLocations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAllCurrentLocations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/getTripDeals?userName=internalUser4&tripDuration=7&ticketQuantity=3&numberOfAdults=1&numberOfChildren=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getTripDeals?userName=internalUser4&tripDuration=7&ticketQuantity=3&numberOfAdults=1&numberOfChildren=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getTripDeals"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "internalUser4"
+						},
+						{
+							"key": "tripDuration",
+							"value": "7"
+						},
+						{
+							"key": "ticketQuantity",
+							"value": "3"
+						},
+						{
+							"key": "numberOfAdults",
+							"value": "1"
+						},
+						{
+							"key": "numberOfChildren",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

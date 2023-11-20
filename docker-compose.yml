@@ -1,0 +1,60 @@
+version: '3.9'
+name: tourguideapp
+
+services:
+
+  gpsutil:
+    container_name: gpsutil
+    build:
+      context: ./gpsutil
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    restart: always
+    networks:
+      - host
+
+  rewardscentral:
+    container_name: rewards_central
+
+    build:
+      context: ./rewardsCentral
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    restart: always
+    networks:
+      - host
+
+  trippricer:
+    container_name: trip_pricer
+    build:
+      context: ./tripPricer
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    restart: always
+    networks:
+      - host
+
+  tourguide:
+    container_name: TourGuide
+    environment:
+      gps_util-service-url: gpsutil:8081
+      rewards_central-service-url: rewardscentral:8082
+      trip_pricer-service-url: trippricer:8083
+    build:
+      context: ./TourGuide
+      dockerfile: Dockerfile
+    depends_on:
+      - gpsutil
+      - rewardscentral
+      - trippricer
+    ports:
+      - "8080:8080"
+    restart: always
+    networks:
+      - host
+
+networks:
+  host:
